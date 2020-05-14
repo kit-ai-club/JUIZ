@@ -24,6 +24,9 @@
 
 
 
+
+
+
 from keras.datasets import mnist
 
 # keras.datasetsってところから、mnistというなんかを、借りるよ～
