@@ -1,3 +1,24 @@
+class Inadumi:
+    def __init__(self):
+        self.name = "稲積 駿"
+        self.course = "情報工学課程"
+        self.grade = "3"
+        self.hobby = ["books","music","coffee"]
+
+    def status(self,element):
+        if(element == "名前"):
+            return(self.name)
+        elif(element == "課程"):
+            return(self.course)
+        elif(element == "学年"):
+            return(self.grade)
+        else:
+            return(self.name,self.course,self.grade);
+
+    def print_hobby(self):
+        for element in self.hobby:
+            print(element)
+
 class ReiLa:
     def __init__(self):
         self.name = "零来"
@@ -51,7 +72,8 @@ members.append(reila)
 sasaki = SasakiHidetaka()
 members.append(sasaki)
 
-
+inadumi = Inadumi()
+members.append(inadumi)
 
 
 
