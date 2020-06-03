@@ -63,6 +63,27 @@ class SasakiHidetaka:
             print(h)
 
 
+class DaichiTezuka():  # class名は大文字からと言いつつ、小文字でも実行できたがなぜ？why?
+    def __init__(self, *hobby):  # *を付けると任意の数の引数を指定できるらしい
+        hobby = ["音楽","キャンプ","仕組みを理解すること"]
+        self.hobby = hobby  # classにhobbyという変数を格納
+
+    def status(self,st):
+        ST = ["手塚 太地","電子システム工学課程","3回"]
+        if st=="名前":
+            return(ST[0])
+        if st == "課程":
+            return(ST[1])
+        if st == "学年":
+            return(ST[2])
+        else:
+            return(ST)
+
+    def print_hobby(self):
+        [print(i) for i in self.hobby]
+
+
+
 members = []
 
 # 会員番号順に append していく
@@ -71,6 +92,9 @@ members.append(reila)
 
 sasaki = SasakiHidetaka()
 members.append(sasaki)
+
+tezuka = DaichiTezuka()
+members.append(tezuka)
 
 inadumi = Inadumi()
 members.append(inadumi)
