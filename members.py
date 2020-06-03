@@ -1,3 +1,25 @@
+class Yasuoka:
+    def __init__(self):
+        hobby = ["歌","美術館巡り","読書","アニメ"]
+        self.hobby = hobby
+
+        self.name = "安岡里都"
+        self.katei = "情報工学"
+        self.gakunenn = "1回生"
+
+    def status(self,a):
+        if a == "名前":
+            return self.name
+        if a == "課程":
+            return self.katei
+        if a == "gakunenn":
+            return self.gakunenn
+        else:
+            return self.name,self.katei,self.gakunenn
+    def print_hobby(self):
+        for b in self.hobby:
+            print(b)
+
 class Inadumi:
     def __init__(self):
         self.name = "稲積 駿"
@@ -121,6 +143,9 @@ members.append(tezuka)
 
 inadumi = Inadumi()
 members.append(inadumi)
+
+yasuoka = Yasuoka()
+members.append(yasuoka)
 
 
 
