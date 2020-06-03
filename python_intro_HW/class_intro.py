@@ -1,6 +1,6 @@
 class TestClass:  # クラス名は大文字から
-    def __init__(self, x):  # initialize 初期化関数
-        self.x = x  # クラス変数。クラスにxという値を保管しておく
+    def __init__(self, x):  # initialize （初期化関数 1つ目のselfは必須のおまじない）
+        self.x = x  # クラス変数。クラスにxという値を保管しておく(登録した)
 
     def f(self):  # クラス関数。クラスにfという関数を保管しておく
         print(self.x)
@@ -9,9 +9,10 @@ class TestClass:  # クラス名は大文字から
 testClass = TestClass("x1")
 # インスタンス（実体）の作成。クラスはただの概念。
 # 「文字列()」という表記を使っていれば、クラスか関数のどちらか。
+# self.xがx1になった
 
 testClass.f()  # クラス関数を呼び出す(call)
-testClass.x = "x2"  # クラス変数にアクセス
+testClass.x = "x2"  # クラス変数にアクセス　xがx2に変わった
 testClass.f()
 
 # ちなみに、これでも同じ意味になる

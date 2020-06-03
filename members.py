@@ -83,6 +83,29 @@ class DaichiTezuka():  # class名は大文字からと言いつつ、小文字�
         [print(i) for i in self.hobby]
 
 
+class Yoshida:
+    def __init__(self, namae, katei, gakunen, hobby):
+        self.namae = "吉田健悟"
+        self.katei = "応用化学課程"
+        self.gakunen = "1回生"
+        self.hobby = ["音楽", "水泳", "漫画"]
+
+    def status(self, x):
+        if x == "名前":
+            return self.namae
+        elif x == "課程":
+            return self.katei
+        elif x == "学年":
+            return self.gakunen
+        else:
+            return self.namae, self.katei, self.gakunen
+
+    def print_hobby(self):
+        for y in self.hobby:
+            print(y)
+
+
+
 
 members = []
 
