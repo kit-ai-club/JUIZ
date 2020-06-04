@@ -1,19 +1,52 @@
+"""
+補足：
+・変数・関数・クラス名は本来「自由」。ただ、できるだけ分かりやすくするために、いろんなマナーがある。
+・インスタンス作成文は、初期化関数の呼び出し文でもある。初期化関数に引数を用意するなら、インスタンス作成文に引数を書かないといけない。
+・関数・クラス・クラス関数・クラス変数は、一度定義すればそれに縛られる。いっぽう一時変数は、じゃんじゃん新しいのを作れる。
+・関数の引数名は自由。分かりやすいのをつけてあげよう
+・灰色になっている変数は、せっかく定義したのに使われてないよ、のサイン
+"""
+
+class Yasuoka:
+    def __init__(self):
+        hobby = ["歌","美術館巡り","読書","アニメ"]
+        self.hobby = hobby
+
+        self.name = "安岡里都"
+        self.katei = "情報工学"
+        self.gakunenn = "1回生"
+
+    def status(self,a):
+        if a == "名前":
+            return self.name
+        if a == "課程":
+            return self.katei
+        if a == "gakunenn":
+            return self.gakunenn
+        else:
+            return self.name,self.katei,self.gakunenn
+    def print_hobby(self):
+        for b in self.hobby:
+            print(b)
+
+
+
 class Inadumi:
     def __init__(self):
         self.name = "稲積 駿"
         self.course = "情報工学課程"
         self.grade = "3"
-        self.hobby = ["books","music","coffee"]
+        self.hobby = ["books", "music", "coffee"]
 
     def status(self,element):
-        if(element == "名前"):
-            return(self.name)
-        elif(element == "課程"):
-            return(self.course)
-        elif(element == "学年"):
-            return(self.grade)
+        if element == "名前":
+            return self.name
+        elif element == "課程":
+            return self.course
+        elif element == "学年":
+            return self.grade
         else:
-            return(self.name,self.course,self.grade);
+            return self.name, self.course, self.grade
 
     def print_hobby(self):
         for element in self.hobby:
@@ -63,7 +96,7 @@ class SasakiHidetaka:
             print(h)
 
 
-class DaichiTezuka():  # class名は大文字からと言いつつ、小文字でも実行できたがなぜ？why?
+class DaichiTezuka:  # class名は大文字からと言いつつ、小文字でも実行できたがなぜ？why?
     def __init__(self, *hobby):  # *を付けると任意の数の引数を指定できるらしい
         hobby = ["音楽","キャンプ","仕組みを理解すること"]
         self.hobby = hobby  # classにhobbyという変数を格納
@@ -84,7 +117,7 @@ class DaichiTezuka():  # class名は大文字からと言いつつ、小文字�
 
 
 class Yoshida:
-    def __init__(self, namae, katei, gakunen, hobby):
+    def __init__(self):
         self.namae = "吉田健悟"
         self.katei = "応用化学課程"
         self.gakunen = "1回生"
@@ -105,6 +138,27 @@ class Yoshida:
             print(y)
 
 
+class Sanjo:
+    def __init__(self):
+        self.name="三城史裕"
+        self.cource="情報工学課程"
+        self.grade="2回生"
+        self.hobby=["ロボコン","画像認識","web作成"]
+    def status(self,hoge):
+        if hoge=="名前":
+            return  self.name
+        elif hoge=="学年":
+            return self.grade
+        elif hoge=="課程":
+            return self.cource
+        else:
+            return self.name,self.cource,self.grade
+    def print_hobby(self):
+        for fuga in self.hobby:
+            print(fuga)
+
+
+
 
 
 members = []
@@ -122,9 +176,8 @@ members.append(tezuka)
 inadumi = Inadumi()
 members.append(inadumi)
 
-sanjo =Sanjo()
-members.append(sanjo)
-
+yoshida = Yoshida()
+members.append(yoshida)
 
 print("--------メンバー--------")
 for i, m in zip(range(len(members)), members):
