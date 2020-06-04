@@ -136,7 +136,7 @@ class Sanjo:
 
 
 
-members = ["三城"]
+members = []
 
 # 会員番号順に append していく
 reila = ReiLa()
