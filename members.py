@@ -13,17 +13,17 @@ class Inadumi:
         self.name = "稲積 駿"
         self.course = "情報工学課程"
         self.grade = "3"
-        self.hobby = ["books","music","coffee"]
+        self.hobby = ["books", "music", "coffee"]
 
     def status(self,element):
-        if(element == "名前"):
-            return(self.name)
-        elif(element == "課程"):
-            return(self.course)
-        elif(element == "学年"):
-            return(self.grade)
+        if element == "名前":
+            return self.name
+        elif element == "課程":
+            return self.course
+        elif element == "学年":
+            return self.grade
         else:
-            return(self.name,self.course,self.grade);
+            return self.name, self.course, self.grade
 
     def print_hobby(self):
         for element in self.hobby:
@@ -73,7 +73,7 @@ class SasakiHidetaka:
             print(h)
 
 
-class DaichiTezuka():  # class名は大文字からと言いつつ、小文字でも実行できたがなぜ？why?
+class DaichiTezuka:  # class名は大文字からと言いつつ、小文字でも実行できたがなぜ？why?
     def __init__(self, *hobby):  # *を付けると任意の数の引数を指定できるらしい
         hobby = ["音楽","キャンプ","仕組みを理解すること"]
         self.hobby = hobby  # classにhobbyという変数を格納
@@ -94,7 +94,7 @@ class DaichiTezuka():  # class名は大文字からと言いつつ、小文字�
 
 
 class Yoshida:
-    def __init__(self, namae, katei, gakunen, hobby):
+    def __init__(self):
         self.namae = "吉田健悟"
         self.katei = "応用化学課程"
         self.gakunen = "1回生"
@@ -114,6 +114,7 @@ class Yoshida:
         for y in self.hobby:
             print(y)
 
+
 class Sanjo:
     def __init__(self):
         self.name="三城史裕"
@@ -131,7 +132,8 @@ class Sanjo:
             return self.name,self.cource,self.grade
     def print_hobby(self):
         for fuga in self.hobby:
-            print(fuga+"\n")
+            print(fuga)
+
 
 
 
@@ -151,7 +153,8 @@ members.append(tezuka)
 inadumi = Inadumi()
 members.append(inadumi)
 
-
+yoshida = Yoshida()
+members.append(yoshida)
 
 print("--------メンバー--------")
 for i, m in zip(range(len(members)), members):
