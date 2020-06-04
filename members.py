@@ -114,10 +114,29 @@ class Yoshida:
         for y in self.hobby:
             print(y)
 
+class Sanjo:
+    def __init__(self):
+        self.name="三城史裕"
+        self.cource="情報工学課程"
+        self.grade="2回生"
+        self.hobby=["ロボコン","画像認識","web作成"]
+    def status(self,hoge):
+        if hoge=="名前":
+            return  self.name
+        elif hoge=="学年":
+            return self.grade
+        elif hoge=="課程":
+            return self.cource
+        else:
+            return self.name,self.cource,self.grade
+    def print_hobby(self):
+        for fuga in self.hobby:
+            print(fuga+"\n")
 
 
 
-members = []
+
+members = ["三城"]
 
 # 会員番号順に append していく
 reila = ReiLa()
