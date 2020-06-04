@@ -122,6 +122,8 @@ members.append(tezuka)
 inadumi = Inadumi()
 members.append(inadumi)
 
+sanjo =Sanjo()
+members.append(sanjo)
 
 
 print("--------メンバー--------")
