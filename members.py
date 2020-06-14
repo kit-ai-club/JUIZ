@@ -8,6 +8,29 @@
 """
 
 
+class Maeno:
+    def _init_(self):
+        self.name = "前野彩実"
+        self.course = "情報工学"
+        self.grade = "1年"
+        self.hobby = ["pen spinning", "sportscar"]
+
+    def status(self, set):
+        if set == "名前":
+            return self.name
+        elif set == "課程":
+            return self.course
+        elif set == "学年":
+             return self.grade
+        else:
+            return self.name, self.course, self.grade
+
+    def print_hobby(self):
+        for hobby in self.hobby:
+            print(hobby)
+
+
+
 class Inadumi:
     def __init__(self):
         self.name = "稲積 駿"
@@ -125,6 +148,9 @@ members.append(reila)
 
 sasaki = SasakiHidetaka()
 members.append(sasaki)
+
+maeno = Maeno()
+members.append(maeno)
 
 tezuka = DaichiTezuka()
 members.append(tezuka)
